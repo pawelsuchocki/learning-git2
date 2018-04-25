@@ -1,7 +1,6 @@
 body {
   background-color: blue;
-  margin: 0 auto;
-  display: flex; }
+  margin: 0 auto; }
 
 h1 {
   font-size: 30px;
@@ -15,4 +14,4 @@ p {
   padding: 20px;
   margin-top: 45px; }
 
-/*# sourceMappingURL=output.css.map */
+/*# sourceMappingURL=main.prefixed.css.map */
