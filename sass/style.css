@@ -1,6 +1,7 @@
 body {
   background-color: blue;
   margin: 0 auto;
+  display: -ms-flexbox;
   display: flex; }
 
 h1 {
@@ -14,5 +15,3 @@ p {
   text-align: center;
   padding: 20px;
   margin-top: 45px; }
-
-/*# sourceMappingURL=output.css.map */
