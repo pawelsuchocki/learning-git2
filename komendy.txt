@@ -1,3 +1,0 @@
-node_modules/.bin/autoprefixer-cli -o main.prefixed.css sass/output.css
-
-nu-html-checker - nie mam zielonego pojêcia jak ma wygl¹daæ komenda do tego:)
