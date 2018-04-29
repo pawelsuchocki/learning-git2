@@ -6,23 +6,19 @@
   "scripts": {
     "test": "npm-run-all test:*",
     "test:html": "globstar nu-html-checker *.html",
-
     "init-project": "npm install && npm-run-all init:*",
-	"init:dirs": "mkdirp sass css vendor images js",
-	"init:files": "touch README.md index.html sass/style.scss js/script.js",
-	"init:gitignore": "curl https://raw.githubusercontent.com/github/gitignore/master/Node.gitignore -o .gitignore",
-
+    "init:dirs": "mkdirp sass css vendor images js",
+    "init:files": "touch README.md index.html sass/style.scss js/script.js",
+    "init:gitignore": "curl https://raw.githubusercontent.com/github/gitignore/master/Node.gitignore -o .gitignore",
     "build": "npm-run-all build:* test",
-	"build:clean": "rimraf(f, [opts], callback)",
-	"build:sass": "node-sass --output-style compact -o css sass",
-	"build:autoprefixer": "autoprefixer-cli sass/style.css",
-
-	"build-dev:sass": "node-sass --output-style expanded --source-map true -o css sass",
-
+    "build:clean": "rimraf(f, [opts], callback)",
+    "build:sass": "node-sass --output-style compact -o css sass",
+    "build:autoprefixer": "autoprefixer-cli sass/style.css",
+    "build-dev:sass": "node-sass --output-style expanded --source-map true -o css sass",
     "watch": "npm-run-all build -p watch:*",
     "watch:browsersync": "browser-sync start --server --files 'sass/*.css' '*.html'",
-	"watch:sassprefixer": "node-sass --output-style expanded --source-map true -o css sass --watch && onchange -d 100 sass/style.css -- autoprefixer-cli -o sass/style.css sass/style.css"  
-},
+    "watch:sassprefixer": "node-sass --output-style expanded --source-map true -o css sass --watch && onchange -d 100 sass/style.css -- autoprefixer-cli -o sass/style.css sass/style.css"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/pawelsuchocki/learning-git2.git"
@@ -39,6 +35,7 @@
     "browser-sync": "^2.23.7",
     "globstar": "^1.0.0",
     "node-sass": "^4.9.0",
+    "npm-run-all": "^4.1.2",
     "nu-html-checker": "^0.1.0",
     "onchange": "^3.3.0"
   }
