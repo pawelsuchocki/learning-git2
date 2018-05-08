@@ -11,7 +11,7 @@
     "init:files": "touch README.md index.html sass/style.scss js/script.js",
     "init:gitignore": "curl https://raw.githubusercontent.com/github/gitignore/master/Node.gitignore -o .gitignore",
     "build": "npm-run-all build:* test",
-    "build:clean": "rimraf(f, [opts], callback)",
+    "build:clean": "rimraf sass/*)",
     "build:sass": "node-sass --output-style compact -o css sass",
     "build:autoprefixer": "autoprefixer-cli sass/style.css",
     "build-dev:sass": "node-sass --output-style expanded --source-map true -o css sass",
@@ -37,6 +37,7 @@
     "node-sass": "^4.9.0",
     "npm-run-all": "^4.1.2",
     "nu-html-checker": "^0.1.0",
-    "onchange": "^3.3.0"
+    "onchange": "^3.3.0",
+    "rimraf": "^2.6.2"
   }
 }
